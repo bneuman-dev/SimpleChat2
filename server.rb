@@ -116,8 +116,8 @@ class Server
 
   def find_destination(message)
     dest = message.split(' ')[1]
-    @users.each { |user| puts user.username; return user if user.username.downcase == dest }
-    @chats.each { |chat| return chat if chat.name.downcase == dest }
+    @users.each { |user| puts user.username; return user if user.username.downcase == dest.downcase }
+    @chats.each { |chat| return chat if chat.name.downcase == dest.downcase }
     return nil
   end
 
@@ -137,7 +137,6 @@ class Server
             user.mark_alive
           
           else
-
             message = parse_message(input, user)
             dest = find_destination(input)
             if dest.nil?

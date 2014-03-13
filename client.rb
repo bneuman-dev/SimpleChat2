@@ -39,7 +39,7 @@ class Client
       end
     end
 
-    trh3 = Thread.start do
+    thr3 = Thread.start do
       loop do
         @socket.puts("ALIVE")
         sleep 5
@@ -74,7 +74,7 @@ def ui
 end
 
 ui
-/msg #channel
+# /msg #channel
 
 
   # def parse_message(input)
