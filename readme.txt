@@ -1,3 +1,0 @@
-This is a very simple SimpleChat.
-
-I started to implement some IRC-like features: a bare protocol that would make it possible to have more than one channel, private msgs, etc. Right now the chat breaks when users disconnect, because the server is still trying to forward messages onto those users. When I left this project alone I was halfway through implementing a keepAlive check, to take disconncted users off the list of users to forward messages to.
